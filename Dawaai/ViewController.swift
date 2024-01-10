@@ -24,7 +24,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var button: UIButton!
     
-    
+    @IBOutlet weak var photo: UIImageView!
     
     
     
@@ -40,6 +40,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         saView.layer.masksToBounds = false
         saView.layer.cornerRadius = 4.0
         
+//        photo.roundedImage()
         
        }
 
@@ -227,3 +228,12 @@ extension UIView {
     }
 }
 // START THE CODE
+
+extension UIImageView {
+    
+    func roundedImage() {
+        self.layer.cornerRadius = self.frame.size.width / 2
+        self.clipsToBounds = true
+    }
+    
+}
