@@ -83,6 +83,21 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         performSegue(withIdentifier: "Scanner", sender: nil)
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//
+//            super .viewWillAppear(true)
+//
+//
+//            self.imageVIew.layer.cornerRadius = self.imageVIew.frame.size.width / 2
+//
+//            self.imageVIew.clipsToBounds = true
+//
+//            self.imageVIew.layer.borderColor = UIColor.white.cgColor
+//
+//            self.imageVIew.layer.borderWidth = 5
+//
+//                }
+    
     
 }
 extension ViewController: UIImagePickerControllerDelegate, UINavigationBarDelegate{
@@ -211,4 +226,4 @@ extension UIView {
         }
     }
 }
-
+// START THE CODE
