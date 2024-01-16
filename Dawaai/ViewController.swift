@@ -27,11 +27,16 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var photo: UIImageView!
     
     
+    @IBOutlet weak var repeatPopUp: UIButton!
     
     @IBOutlet weak var sView: UITextView!
     let saView = UITextView()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        setPopUpBtn()
         
         saView.layer.shadowColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0.25)
         saView.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
@@ -56,18 +61,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         sender.backgroundColor = sender.backgroundColor == UIColor.white ? UIColor.green : UIColor.white
     }
     
-    @IBAction func duringBtn(_ sender: UIButton) {
-        sender.backgroundColor = sender.backgroundColor == UIColor.white ? UIColor.green : UIColor.white
-    }
     @IBAction func afterBtn(_ sender: UIButton) {
         sender.backgroundColor = sender.backgroundColor == UIColor.white ? UIColor.green : UIColor.white
     }
     
-    @IBAction func medTouch(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "Medicine", sender: nil)
-       
-//            hello.layer.shadowRadius = 5.0
-    }
     
 //FOR CLICKING PHOTO
     
@@ -80,9 +77,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         
     }
     
-    @IBAction func scannerBtn(_ sender: UIButton) {
-        performSegue(withIdentifier: "Scanner", sender: nil)
-    }
     
 //    override func viewWillAppear(_ animated: Bool) {
 //
@@ -98,7 +92,22 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 //            self.imageVIew.layer.borderWidth = 5
 //
 //                }
-    
+//    func setPopUpBtn(){
+//        
+//        let optionClosure = {(action : UIAction) in 
+//            print(action.title)}
+//        
+//        repeatPopUp.menu = UIMenu(children: [
+//                    UIAction(title: "Country 1", state: .off, handler: optionClosure),
+//                    UIAction(title: "Country 2", state: .on, handler: optionClosure),
+//                    UIAction(title: "Country 3", state: .off, handler: optionClosure),
+//                    UIAction(title: "Country 4", state: .off , handler: optionClosure)
+//                ])
+//        
+//        repeatPopUp.showsMenuAsPrimaryAction = true
+//        repeatPopUp.changesSelectionAsPrimaryAction = true
+//        
+//    }
     
 }
 extension ViewController: UIImagePickerControllerDelegate, UINavigationBarDelegate{
